@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+</head>
+<body>
+<form th:action="@{/admin/save}" method="post">
+    <input type="hidden" th:field="${user.id}">
+
+    <p> first name: <input type="text" th:field="${user.firstName}"></p>
+    <p> last name: <input type="text" th:field="${user.lastName}"></p>
+    <p> age: <input type="text" th:field="${user.age}"></p>
+    <p> email: <input type="text" th:field="${user.email}"></p>
+    <p> password: <input type="text" th:field="${user.password}"></p>
+
+    <!--    roles: <select  >-->
+    roles:
+        <select th:field="${user.listPossibleRoles}" multiple>
+<!--    <select>-->
+        <option th:each=" role: ${roles}"
+                th:value="${role.name}"
+                th:text="${role.getPlaintRole()}">
+        </option>
+    </select>
+
+    <input type="submit" value="SAVE">
+</form>
+</body>
+</html>
