@@ -162,7 +162,6 @@
 
                                                             <div class="col-8 offset-md-2">
 
-                                                                <!------------Тело модального окна--------------->
                                                                 <div class="modal-body text-center">
 
                                                                     <div class="mb-3">
@@ -369,7 +368,7 @@
                             </div>  <!-- card-->
                         </div>  <!--users table-->
 
-                        <!--new tab container user-->
+                        <!--new user tab container -->
                         <div class="tab-pane fade"
                              id="nav-profile"
                              role="tabpanel"
@@ -396,11 +395,11 @@
                                                            id="lastName"/>
 
                                                     <label for="age" class="form-label fw-bold">Age</label>
-                                                    <input type="text" class="form-control" th:field="${newUser.age}"
+                                                    <input type="number" class="form-control" th:field="${newUser.age}"
                                                            id="age"/>
 
                                                     <label for="email" class="form-label fw-bold">Email</label>
-                                                    <input type="text" class="form-control" th:field="${newUser.email}"
+                                                    <input type="email" class="form-control" th:field="${newUser.email}"
                                                            id="email"/>
 
                                                     <label for="password" class="form-label fw-bold">Password</label>
